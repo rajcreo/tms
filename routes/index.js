@@ -4,8 +4,9 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function (req, res, next) {
   // res.render('index', { title: 'Express' });
-  res.send({ abcd: 'abcd' });
+  res.send({ abcd: 'abcd 123' });
 });
+
 
 router.post('/login', (req, res, next) => {
   res.send({
