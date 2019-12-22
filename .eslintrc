@@ -1,129 +1,50 @@
 {
-    "extends": "airbnb",
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "experimentalObjectRestSpread": true,
-        "generators": true
-      }
-    },
-    "env": {
-      "browser": true,
-      "node": true,
-      "jest": true,
-      "phantomjs": true,
-      "es6": true
-    },
-    "globals": {
-      "ENV": true
-    },
-    "rules": {
-      "react/sort-comp": 0,
-      "react/require-default-props": 0,
-      "indent": 2,
-      "no-alert": 2,
-      "import/prefer-default-export": 0,
-      "no-await-in-loop": 0,
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": [
-            "**/*.story.jsx",
-            "**/*.spec.jsx",
-            "**/*.spec.js",
-            "**/tests/*.*",
-            "**/tests/**/*.*",
-            "**/tasks/**/*.js",
-            "**/config/**/*.js",
-            "**/__storybook__/*.js",
-            "gulpfile.js"
-          ]
-        }
-      ],
-      "import/extensions": [
-        "error",
-        "always",
-        {
-          "js": "never",
-          "jsx": "never",
-          "mjs": "never"
-        }
-      ],
-      "class-methods-use-this": 1,
-      "no-restricted-syntax": 1,
-      "no-use-before-define": 0,
-      "no-param-reassign": 2,
-      "no-console": 1,
-      "no-useless-escape": 1,
-      "new-cap": 0,
-      "func-names": 0,
-      "prefer-spread": 1,
-      "space-before-function-paren": 0,
-      "comma-dangle": 0,
-      "no-confusing-arrow": 0,
-      "strict": 0,
-      "no-underscore-dangle": 0,
-      // "no_camelcased": 0,
-      "camelcase": [0, {"properties": "always"}],
-      "max-len": [
-        0,
-        120
-      ],
-      "quotes": [
-        "error",
-        "single",
-        {
-          "allowTemplateLiterals": true
-        }
-      ],
-      "arrow-parens": 0,
-      "padded-blocks": 0,
-      "react/jsx-first-prop-new-line": 0,
-      "react/jsx-max-props-per-line": 0,
-      "react/prop-types": 2,
-      "react/forbid-prop-types": 2,
-      "no-nested-ternary": 0,
-      "react/style-prop-object": 1,
-      "react/no-did-update-set-state": 0,
-      "react/jsx-boolean-value": [
-        1,
-        "always"
-      ],
-      "react/no-multi-comp": 1,
-      "react/jsx-no-bind": 2,
-      "react/jsx-tag-spacing": [
-        "warn",
-        {
-          "beforeSelfClosing": "always"
-        }
-      ],
-      "react/prefer-stateless-function": 0,
-      "react/jsx-closing-bracket-location": 1,
-      "jsx-a11y/label-has-for": 0,
-      "jsx-a11y/no-static-element-interactions": 0,
-      "jsx-a11y/href-no-hash": "off",
-      "jsx-a11y/anchor-is-valid": [
-        "warn",
-        {
-          "aspects": [
-            "invalidHref"
-          ]
-        }
-      ],
-      "react/jsx-filename-extension": [
-        1,
-        {
-          "extensions": [
-            ".js",
-            ".jsx",
-            ".mjs"
-          ]
-        }
-      ]
-    },
-    "settings": {
-      "import/resolver": {
-        "babel-module": {}
-      }
+  "extends": "eslint:recommended",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
     }
+  },
+  "rules": {
+    "no-console": ["warn"],
+    "comma-dangle": ["error", "always-multiline"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "eol-last": ["error", "always"],
+    "indent": ["error", 2, { "MemberExpression": 1 }],
+    "no-multiple-empty-lines": ["error"],
+    "no-new-symbol": "error",
+    "no-trailing-spaces": ["error"],
+    "no-undef": ["error"],
+    "no-unused-vars": ["error"],
+    "object-shorthand": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "prefer-const": 2,
+    "quotes": ["error", "single"],
+    "semi": ["error"],
+    "space-in-parens": ["error", "never"],
+    "strict": [2, "never"],
+    "no-restricted-syntax": ["error"],
+    "no-use-before-define": ["error"],
+    "no-param-reassign": ["error"],
+    "arrow-parens": ["error", "always"],
+    "no-useless-escape": 1,
+    "new-cap": [0],
+    "prefer-spread": ["error"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "no-confusing-arrow": ["error"],
+    "no-underscore-dangle": [0, { "allow": ["_id"] } ]
   }
+}
