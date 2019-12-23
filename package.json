@@ -1,22 +1,24 @@
 {
   "name": "tms",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./app/bin/www",
+    "start:dev": "nodemon --watch ./app ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rajcreo/tms.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rajcreo/tms/issues"
-  },
-  "homepage": "https://github.com/rajcreo/tms#readme",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-http-context": "^1.2.3",
+    "express-promise-router": "^3.0.3",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "morgan": "~1.9.1",
+    "pg": "^7.15.1",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {}
 }
