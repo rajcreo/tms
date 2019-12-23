@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const jwt = require('jsonwebtoken');
-const privateKEY = fs.readFileSync(path.join(__dirname, './../config/private.key'), 'utf8');
-const publicKEY = fs.readFileSync(path.join(__dirname, './../config/public.key'), 'utf8');
+const privateKEY = fs.readFileSync(path.join(__dirname, './../../config/private.key'), 'utf8');
+const publicKEY = fs.readFileSync(path.join(__dirname, './../../config/public.key'), 'utf8');
 
 
 const i = 'Rohit Sharma'; // issuer
