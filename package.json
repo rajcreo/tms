@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
+    "eslint-config-airbnb": "^18.0.1",
     "express": "~4.16.1",
     "express-http-context": "^1.2.3",
     "express-promise-router": "^3.0.3",
