@@ -1,8 +1,21 @@
-module.exports = (resolver) => async (req, res) => {
+const { get } = require('lodash');
+const { verifyToken } = require('./../services/auth');
+
+
+module.exports = (resolver, isPublic) => async (req, res) => {
   try {
-    // console.log(req);
-    const data = await resolver(req.body, req.params, req.query);
-    res.send({ data, success: true });
+    let user = {};
+    if (!isPublic) user = verifyToken(get(req, 'headers.token', ''));
+    const data = await resolver({
+      body: req.body,
+      params: req.params,
+      query: req.query,
+      user,
+    });
+
+    setTimeout(() => {
+      res.send({ data, success: true });
+    }, 3000);
   } catch (e) {
     console.error('error:', e.message);
     res.send({

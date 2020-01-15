@@ -2,7 +2,8 @@ const { get } = require('lodash');
 const client = require('../../db/index');
 var { createToken } = require('../auth');
 
-module.exports = async ({ username, password }) => {
+module.exports = async ({ body }) => {
+  const { username, password } = body;
   let token = null;
   let user = null;
   try {

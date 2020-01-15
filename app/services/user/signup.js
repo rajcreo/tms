@@ -3,8 +3,8 @@ const client = require('../../db/index');
 const utils = require('./../../utils');
 const { createToken } = require('../auth');
 
-module.exports = async ({ name, email, password, city = '', phone }) => {
-  console.log('phone:::::', phone);
+module.exports = async ({ body }) => {
+  const { name, email, password, city = '', phone } = body;
   if (!utils.isValidName(name)) throw new Error('Invalid Name');
   if (!utils.isValidEmail(email)) throw new Error('Invalid Email');
   if (!utils.isValidPass(password)) throw new Error('Invalid Password');
